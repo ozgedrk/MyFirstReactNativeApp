@@ -17,9 +17,13 @@ export default function HomeScreen({navigation}) {
          title="Sayac Uygulamasi"
          onPress={() => navigation.navigate('Sayac')}
        />
-               <Button
+        <Button
          title="Kutu Uygulamasi"
          onPress={() => navigation.navigate('Kutu Uygulamasi')}
+       />
+        <Button
+         title="Renk Degistir"
+         onPress={() => navigation.navigate('Renk Degistir')}
        />
     </View>
   )
