@@ -23,8 +23,9 @@ const reducer = (state,action) =>{
 };
 
 export default function ColorChangeScreen() {
-    const [state, dispatch] = useReducer(reducer, {red:0,blue:0, green:0})
-  return (
+    const [state, dispatch] = useReducer(reducer, {red:0, blue:0, green:0});
+    const { red, blue, green} = state;
+    return (
     <View>
         <ColorChange color="Kirmizi" 
                      onIncrease ={()=> dispatch({type: 'changeRed',payload: 20})}
@@ -38,7 +39,7 @@ export default function ColorChangeScreen() {
        
         <View style={{height: 150, 
                       width:150, 
-                      backgroundColor: `rgb(${state.red}, ${state.blue}, ${state.green})`}} />
+                      backgroundColor: `rgb(${red}, ${blue}, ${green})`}} />
  
     </View>
     
